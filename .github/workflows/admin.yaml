@@ -1,0 +1,27 @@
+name: Deploy Admin
+
+on:
+  push:
+    branches:
+      - master
+
+    # Deploy if either admin or components changes
+    paths:
+      - 'packages/admin/*'
+      - 'packages/components/*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: packages/admin/.next/
