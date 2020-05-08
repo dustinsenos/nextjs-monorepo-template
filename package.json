@@ -1,9 +1,10 @@
 {
   "name": "root",
   "private": true,
-  "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "dev": "npm run bootstrap && lerna run dev --parallel",
+    "build": "npm run bootstrap && lerna run build --parallel"
   },
   "devDependencies": {
     "lerna": "^3.20.2"
