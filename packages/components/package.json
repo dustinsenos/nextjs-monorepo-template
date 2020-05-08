@@ -1,0 +1,25 @@
+{
+  "name": "components",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Dustin Senos <dustin@dustinsenos.com>",
+  "homepage": "https://github.com/dustinsenos/nextjs-monorepo-template#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "source": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustinsenos/nextjs-monorepo-template.git"
+  },
+  "scripts": {
+    "dev": "microbundle watch --globals react=React --jsx React.createElement",
+    "build": "microbundle build --globals react=React --jsx React.createElement",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/dustinsenos/nextjs-monorepo-template/issues"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
